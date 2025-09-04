@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Halloween Night 2025 — Đại học Văn Hiến</title>
+  <meta name="description" content="Website sự kiện Halloween Night 2025 tại Đại học Văn Hiến. Thông tin chương trình, đăng ký tham gia, thư viện ảnh và liên hệ."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0b10;      /* nền đêm */
+      --bg-2:#12121a;
+      --orange:#ff7a18;   /* cam Halloween */
+      --purple:#7a2ff3;   /* tím ma mị */
+      --green:#52ffa8;    /* nhấn */
+      --text:#e6e6ef;     /* chữ */
+      --muted:#a7a7ba;
+      --card:#161623;
+      --shadow: 0 10px 30px rgba(0,0,0,.45), inset 0 0 60px rgba(255,122,24,.05);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(1200px 600px at 80% -10%, rgba(122,47,243,.25), transparent 60%),
+                 radial-gradient(900px 500px at 10% -10%, rgba(255,122,24,.25), transparent 60%), var(--bg);
+         color:var(--text); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    }
+    a{color:inherit}
+    .container{width:min(1100px,92%);margin-inline:auto}
+
+    /* ===== Top Nav ===== */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(11,11,16,.7);backdrop-filter: blur(10px); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+    .brand{display:flex;gap:.6rem;align-items:center;font-weight:700}
+    .brand .logo{width:30px;height:30px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(135deg,var(--orange),var(--purple));box-shadow:0 6px 18px rgba(122,47,243,.35)}
+    .brand span{letter-spacing:.3px}
+    .menu{display:flex;gap:1rem;align-items:center}
+    .menu a{padding:.55rem .8rem;border-radius:10px;color:var(--muted);text-decoration:none;font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .cta{background:linear-gradient(135deg,var(--orange),var(--purple)); color:white !important; box-shadow:0 8px 24px rgba(122,47,243,.35);}
+
+    /* ===== Hero ===== */
+    .hero{position:relative;min-height:88svh;display:grid;place-items:center;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300"><g fill="%23ffffff" fill-opacity="0.06"><path d="M30 90c20-30 50-40 80 0 30-40 60-30 80 0 20-25 50-35 80 0 30-35 60-20 80 0 20-25 50-25 80 0 20-20 50-20 60 0"/><circle cx="120" cy="40" r="3"/><circle cx="440" cy="70" r="2"/><circle cx="520" cy="40" r="2"/></g></svg>') center/cover no-repeat; filter:contrast(120%) saturate(120%)}
+    .hero .wrap{position:relative;z-index:1;text-align:center;padding:3.5rem 0}
+    .eyebrow{font-family:Creepster, system-ui; letter-spacing:.5px; font-size:1rem; color:var(--green)}
+    .title{font-family:Creepster, system-ui; font-size:clamp(2.8rem, 5.8vw, 5.2rem); line-height:1; margin:.3rem 0 1rem; text-shadow: 0 4px 0 #000, 0 10px 30px rgba(0,0,0,.6)}
+    .subtitle{color:var(--muted);font-size:1.1rem;margin-bottom:1.4rem}
+
+    .countdown{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin:1.2rem 0 2.2rem}
+    .tile{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:1rem .9rem;border-radius:14px;min-width:88px;box-shadow:var(--shadow);}
+    .num{display:block;font-weight:800;font-size:1.8rem}
+    .label{font-size:.8rem;color:var(--muted)}
+
+    .btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:.85rem 1.1rem;border-radius:12px;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,.1)}
+    .btn.secondary{background:transparent;color:var(--text)}
+
+    /* ===== Sections ===== */
+    section{padding:84px 0;border-top:1px solid rgba(255,255,255,.06)}
+    h2{font-family:Creepster, system-ui; font-size:clamp(1.8rem,3.6vw,2.6rem);margin:0 0 .8rem}
+    .lead{color:var(--muted);margin:0 0 1.4rem}
+
+    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1.1rem 1.2rem;box-shadow:var(--shadow)}
+
+    /* Timeline */
+    .timeline{display:grid;gap:1rem}
+    .slot{display:flex;gap:1rem;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:1rem;border-radius:14px}
+    .slot time{font-weight:800;color:var(--orange);min-width:78px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.08)}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    iframe{width:100%;height:320px;border:0;border-radius:14px}
+
+    /* Footer */
+    footer{padding:40px 0;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .grid-2{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 560px){
+      .menu{display:none}
+      .gallery{grid-template-columns:1fr}
+      .tile{min-width:74px}
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Navigation ===== -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🎃</div>
+        <span>Halloween Night • VHU</span>
+      </div>
+      <div class="menu" role="menubar">
+        <a role="menuitem" href="#about">Giới thiệu</a>
+        <a role="menuitem" href="#timeline">Chương trình</a>
+        <a role="menuitem" href="#register">Đăng ký</a>
+        <a role="menuitem" href="#gallery">Thư viện</a>
+        <a role="menuitem" href="#contact" class="btn cta">Liên hệ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero" role="banner" id="home">
+    <div class="wrap container">
+      <div class="eyebrow">31/10/2025 • Hội trường lớn • Đại học Văn Hiến</div>
+      <h1 class="title">HALLOWEEN NIGHT 2025</h1>
+      <p class="subtitle">Trick or Treat — Hẹn gặp bạn tại VHU! Cùng hóa trang, chơi game, săn quà và cháy hết mình cùng âm nhạc.</p>
+
+      <div class="countdown" aria-label="Đếm ngược đến sự kiện">
+        <div class="tile" aria-live="polite"><span class="num" id="dd">00</span><span class="label">Ngày</span></div>
+        <div class="tile" aria-live="polite"><span class="num" id="hh">00</span><span class="label">Giờ</span></div>
+        <div class="tile" aria-live="polite"><span class="num" id="mm">00</span><span class="label">Phút</span></div>
+        <div class="tile" aria-live="polite"><span class="num" id="ss">00</span><span class="label">Giây</span></div>
+      </div>
+
+      <div class="btns">
+        <a class="btn cta" href="#register">Đăng ký ngay</a>
+        <a class="btn secondary" href="#timeline">Xem chương trình</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== About ===== -->
+  <section id="about">
+    <div class="container grid-2">
+      <div>
+        <h2>👻 Chào mừng đến với Halloween Night 2025</h2>
+        <p class="lead">Sự kiện thường niên dành cho sinh viên Đại học Văn Hiến: hóa trang 🎭, trò chơi 👾, âm nhạc 🎶 và vô số góc chụp ảnh 📸 đậm chất Halloween.
+        </p>
+        <div class="card">
+          <ul>
+            <li><strong>Thời gian:</strong> 19:00 – 31/10/2025</li>
+            <li><strong>Địa điểm:</strong> Hội trường lớn – Cơ sở 613 Âu Cơ, Q. Tân Phú, TP.HCM</li>
+            <li><strong>Trang phục khuyến khích:</strong> Hóa trang theo chủ đề “Urban Legends”</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:.2rem">Thể lệ & Điểm nhấn</h3>
+        <ol>
+          <li>Đăng ký trước để nhận QR check-in và bốc thăm quà.</li>
+          <li>Tham gia cuộc thi hóa trang — tổng giải thưởng 5.000.000đ.</li>
+          <li>Mini game “Trick or Treat” theo nhóm tại sảnh.</li>
+          <li>Âm nhạc & DJ, photobooth chủ đề bí ngô.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Timeline ===== -->
+  <section id="timeline">
+    <div class="container">
+      <h2>🕛 Chương trình</h2>
+      <p class="lead">Các mốc chính trong đêm Halloween — có thể linh hoạt điều chỉnh theo kế hoạch của BTC.</p>
+      <div class="timeline">
+        <div class="slot"><time>18:30</time><div><strong>Check-in & Photobooth</strong><br><span class="muted">Nhận vòng tay, chụp ảnh, khởi động mini game khu vực sảnh.</span></div></div>
+        <div class="slot"><time>19:00</time><div><strong>Khai mạc & Warm-up</strong><br><span class="muted">Giới thiệu chương trình, phổ biến thể lệ hóa trang.</span></div></div>
+        <div class="slot"><time>19:30</time><div><strong>Cuộc thi hóa trang</strong><br><span class="muted">Top 10 trình diễn sân khấu – bình chọn bằng QR.</span></div></div>
+        <div class="slot"><time>20:15</time><div><strong>Gameshow “Trick or Treat”</strong><br><span class="muted">Thử thách đội nhóm — quà xịn cho team thắng.</span></div></div>
+        <div class="slot"><time>21:00</time><div><strong>Âm nhạc & DJ</strong><br><span class="muted">Quẩy hết mình với playlist spooky-fun.</span></div></div>
+        <div class="slot"><time>21:30</time><div><strong>Trao giải & Bế mạc</strong><br><span class="muted">Công bố kết quả và bốc thăm may mắn.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Register ===== -->
+  <section id="register">
+    <div class="container grid-2">
+      <div>
+        <h2>📝 Đăng ký tham gia</h2>
+        <p class="lead">Điền thông tin để nhận mã QR check-in và tham gia bốc thăm may mắn. Bạn có thể thay form này bằng Google Form của BTC.</p>
+        <form id="rsvp" class="card" onsubmit="return handleRegister(event)">
+          <div style="display:grid;gap:.8rem;grid-template-columns:1fr 1fr">
+            <label>Họ và tên<br><input required name="name" placeholder="Nguyễn Văn A"/></label>
+            <label>MSSV<br><input required name="mssv" placeholder="22DH12345"/></label>
+            <label>Khoa/Ngành<br><input required name="dept" placeholder="CNTT / QTKD..."/></label>
+            <label>Số điện thoại<br><input required name="phone" placeholder="09xxxxxxxx"/></label>
+            <label style="grid-column:1/ -1">Email<br><input type="email" required name="email" placeholder="ban@vhu.edu.vn"/></label>
+          </div>
+          <div style="margin-top:1rem;display:flex;gap:.6rem;align-items:center">
+            <button class="btn cta" type="submit">Gửi đăng ký</button>
+            <span id="reg-msg" style="color:var(--green);font-weight:700"></span>
+          </div>
+          <p style="margin:.8rem 0 0;color:var(--muted);font-size:.9rem">• Để nhúng Google Form: vào Wix Editor → Embed → Iframe, dán URL Google Form.<br/>• Demo này chỉ lưu tạm trên trình duyệt của bạn.</p>
+        </form>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:.2rem">Hoặc nhúng Google Form</h3>
+        <p class="lead" style="font-size:.95rem">Thay khối bên trái bằng iframe Google Form của bạn:</p>
+        <pre style="white-space:pre-wrap;background:rgba(255,255,255,.04);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.08)">&lt;iframe src="https://docs.google.com/forms/d/FORM_ID/viewform?embedded=true" width="100%" height="760" frameborder="0"&gt;Đang tải…&lt;/iframe&gt;</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section id="gallery">
+    <div class="container">
+      <h2>📸 Thư viện</h2>
+      <p class="lead">Teaser không khí Halloween — có thể thay bằng ảnh năm trước hoặc poster chính thức.</p>
+      <div class="gallery" aria-label="Thư viện hình">
+        <img alt="Bí ngô phát sáng" src="https://images.unsplash.com/photo-1546554137-f86b9593a222?q=80&w=1200&auto=format&fit=crop"/>
+        <img alt="Lâu đài ma ám" src="https://images.unsplash.com/photo-1603202662856-48f0f48f0db2?q=80&w=1200&auto=format&fit=crop"/>
+        <img alt="Bí ngô & nến" src="https://images.unsplash.com/photo-1509043759401-136742328bb3?q=80&w=1200&auto=format&fit=crop"/>
+        <img alt="Mặt nạ ma" src="https://images.unsplash.com/photo-1603912699214-92627f304eb6?q=80&w=1200&auto=format&fit=crop"/>
+        <img alt="Dơi trên nền trăng" src="https://images.unsplash.com/photo-1545153996-47bd948dea1c?q=80&w=1200&auto=format&fit=crop"/>
+        <img alt="Đèn bí ngô" src="https://images.unsplash.com/photo-1603415526960-f7e0328d13cf?q=80&w=1200&auto=format&fit=crop"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <div class="container contact-grid">
+      <div>
+        <h2>📬 Liên hệ Ban tổ chức</h2>
+        <div class="card">
+          <p><strong>Email:</strong> halloween@vhu.edu.vn</p>
+          <p><strong>Fanpage:</strong> facebook.com/…</p>
+          <p><strong>Hotline:</strong> 09xx xxx xxx</p>
+          <p style="color:var(--muted)">*Điền thông tin thực tế của CLB/Đoàn trường.*</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-top:.2rem">📍 Bản đồ — Cơ sở 613 Âu Cơ</h3>
+        <iframe loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=613%20%C3%82u%20C%C6%A1,%20T%C3%A2n%20Ph%C3%BA,%20H%E1%BB%93%20Ch%C3%AD%20Minh&z=15&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">“Beware… The night is coming.” — © 2025 Đại học Văn Hiến • Halloween Night</div>
+  </footer>
+
+  <script>
+    // ===== Countdown (target: Oct 31, 2025 19:00 GMT+7) =====
+    (function(){
+      const tzOffsetMs = 7 * 60 * 60 * 1000; // GMT+7
+      const targetLocal = new Date('2025-10-31T19:00:00+07:00');
+      const dd = document.getElementById('dd');
+      const hh = document.getElementById('hh');
+      const mm = document.getElementById('mm');
+      const ss = document.getElementById('ss');
+      function tick(){
+        const now = new Date();
+        const diff = targetLocal - now;
+        if(diff <= 0){ dd.textContent = '00'; hh.textContent='00'; mm.textContent='00'; ss.textContent='00'; return; }
+        const d = Math.floor(diff / (1000*60*60*24));
+        const h = Math.floor((diff / (1000*60*60)) % 24);
+        const m = Math.floor((diff / (1000*60)) % 60);
+        const s = Math.floor((diff / 1000) % 60);
+        dd.textContent = String(d).padStart(2,'0');
+        hh.textContent = String(h).padStart(2,'0');
+        mm.textContent = String(m).padStart(2,'0');
+        ss.textContent = String(s).padStart(2,'0');
+      }
+      tick(); setInterval(tick, 1000);
+    })();
+
+    // ===== Simple local RSVP (demo only) =====
+    function handleRegister(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      const list = JSON.parse(localStorage.getItem('vhu-halloween-rsvp')||'[]');
+      list.push({...data, createdAt: new Date().toISOString()});
+      localStorage.setItem('vhu-halloween-rsvp', JSON.stringify(list));
+      document.getElementById('reg-msg').textContent = 'Đã nhận đăng ký! Hẹn gặp bạn đêm 31/10 🎃';
+      e.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
